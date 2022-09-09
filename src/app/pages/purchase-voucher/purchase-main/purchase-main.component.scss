@@ -1,0 +1,173 @@
+
+.card-base{
+  display: flex;
+}
+
+.basic-card {
+
+  max-width: 400px;
+  position: relative;
+  margin: 20px auto ;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  -o-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  .card-title {
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .card-sub-title {
+    text-align: center;
+    font-size: 22px;
+  }
+  .card-content {
+    padding: 30px;
+  }
+  .card-text {
+    width: 100%;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    button{
+      background: orange;
+      color: black;
+      font-size: 26px;
+    }
+  }
+  .card-link a {
+    text-decoration: none;
+    position: relative;
+    padding: 10px 0px;
+  }
+  .card-link a:after {
+    top: 30px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    width: 0;
+
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  }
+  .card-link a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+
+.basic-card-light {
+  border: 1px solid #eee;
+}
+
+.basic-card-light .card-title, .basic-card-light .card-link a {
+  color: #636363;
+}
+
+.basic-card-light .card-text {
+  color: #7b7b7b;
+}
+
+.basic-card-light .card-link {
+  border-top: 1px solid #eee;
+}
+
+.basic-card-light .card-link a:after {
+  background:#636363;
+}
+
+
+
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+

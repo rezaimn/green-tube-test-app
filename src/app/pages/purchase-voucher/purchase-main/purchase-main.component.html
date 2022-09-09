@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="card-base">
+    <div class="basic-card basic-card-light">
+      <div class="card-content">
+        <p class="card-title">€ 50.00</p>
+        <p class="card-sub-title">cash in voucher</p>
+        <p class="card-sub-title">valid for: <strong>24 hours</strong></p>
+        <p class="card-text">
+          you will receive your QR code in the next step and will be also e-mailed to <strong>josef@gmail.com</strong>
+        </p>
+      </div>
+
+      <div class="card-button">
+        <button (click)="newPurchase()">PURCHASE VOUCHER</button>
+      </div>
+    </div>
+  </div>
+  <h2>Find a location</h2>
+  <table>
+    <caption>Statement Summary</caption>
+    <thead>
+    <tr>
+      <th scope="col"><h4>Name & Address</h4></th>
+      <th scope="col"><h4>Opening Hours</h4></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let purchase of purchases$ | async">
+      <td data-label="name and address">
+        <b>{{purchase.name}}</b>
+        <br>
+        <p>{{purchase.address}}</p>
+      </td>
+      <td data-label="opening hours">{{purchase.hours}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
